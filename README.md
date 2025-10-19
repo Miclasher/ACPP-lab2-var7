@@ -1,4 +1,4 @@
-
+```
 ================================================================================
 Starting experiment for data size: 100000000 elements
 ================================================================================
@@ -50,3 +50,4 @@ The best speedup achieved was 9.34x compared to the sequential version.
 All experiments completed.
 Final result sink (to prevent optimization that removes time measurement): -40059107.96
 ================================================================================
+```
