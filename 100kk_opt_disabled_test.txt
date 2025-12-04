@@ -1,0 +1,52 @@
+
+================================================================================
+Starting experiment for data size: 100000000 elements
+================================================================================
+
+--- Standard Library Algorithms ---
+1) No policy:           1532.7681 ms
+2) execution::seq:      1526.5934 ms
+3) execution::par:       168.0221 ms (Speedup vs seq: 9.0857x)
+4) execution::par_unseq:   169.7200 ms (Speedup vs seq: 8.9948x)
+
+--- Custom Parallel Algorithm ---
+Number of hardware threads on this system: 12
+
++-------+----------------+----------+
+|   K   |  Time (ms)     | Speedup  |
++-------+----------------+----------+
+|     1 |      1526.0246 |     1.00x |
+|     2 |       783.9219 |     1.95x |
+|     3 |       533.9628 |     2.86x |
+|     4 |       407.4478 |     3.75x |
+|     5 |       326.4546 |     4.68x |
+|     6 |       307.1036 |     4.97x |
+|     7 |       266.5517 |     5.73x |
+|     8 |       235.5685 |     6.48x |
+|     9 |       213.5816 |     7.15x |
+|    10 |       197.0635 |     7.75x |
+|    11 |       181.6915 |     8.40x |
+|    12 |       187.8352 |     8.13x |
+|    13 |       193.9076 |     7.87x |
+|    14 |       198.6016 |     7.69x |
+|    15 |       187.8022 |     8.13x |
+|    16 |       183.6418 |     8.31x |
+|    17 |       180.5545 |     8.46x |
+|    18 |       184.2159 |     8.29x |
+|    19 |       179.1098 |     8.52x |
+|    20 |       189.6539 |     8.05x |
+|    21 |       180.8297 |     8.44x |
+|    22 |       185.2801 |     8.24x |
+|    23 |       174.7300 |     8.74x |
+|    24 |       188.0296 |     8.12x |
++-------+----------------+----------+
+
+--- Findings for this data size ---
+Best performance for custom algorithm was achieved at K = 23 threads.
+This corresponds to 1.92 times the number of available hardware threads (12).
+The best speedup achieved was 8.74x compared to the sequential version.
+
+================================================================================
+All experiments completed.
+Final result sink (to prevent optimization): -39902715.00
+================================================================================
